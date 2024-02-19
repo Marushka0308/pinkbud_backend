@@ -10,7 +10,7 @@ class User(models.Model):
 class UserPost(models.Model):
     description = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
-    img = models.URLField(default=None)
+    img = models.URLField(null=True)
 
     def __str__(self):
         return self.title
@@ -19,7 +19,7 @@ class Therapist(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
     description = models.CharField(max_length=200)
-    img = models.URLField()
+    img = models.URLField(null=True)
     certificate = models.URLField()
     password = models.CharField(max_length=200)
 
@@ -30,7 +30,7 @@ class Lawyer(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
     description = models.CharField(max_length=200)
-    img = models.URLField()
+    img = models.URLField(null=True)
     certificate = models.URLField()
     password = models.CharField(max_length=200)
 
@@ -41,7 +41,7 @@ class Ngo(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
     description = models.CharField(max_length=200)
-    img = models.URLField()
+    img = models.URLField(null=True)
     certificate = models.URLField()
     password = models.CharField(max_length=200)
 

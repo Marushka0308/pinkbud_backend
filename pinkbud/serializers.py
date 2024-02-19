@@ -9,7 +9,7 @@ from .models import Opportunity
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username','password','email']
+        fields = ['name','password','email']
 
 class UserPostSerializer(serializers.ModelSerializer):
     class Meta:
